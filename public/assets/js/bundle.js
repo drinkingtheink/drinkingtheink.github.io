@@ -2,36 +2,37 @@
 'use strict';
 
 module.exports = {
-    props: ['notification_prop'],
+				props: ['notification_prop'],
 
-    data: function data() {
-        return {
-            message: 'Hey, looks like you totally did something!',
-            href: 'http://www.dnb.com',
-            link_text: 'Check out this link',
-            severity: 'important',
-            error_code: null,
-            open: true,
-            close_notification: false
-        };
-    },
-    created: function created() {
-        console.log('Notification component ready to go!');
-    },
+				data: function data() {
+								return {
+												title: "Watch Out!",
+												message: 'Hey, looks like you totally did something!',
+												href: 'http://www.dnb.com',
+												link_text: 'Check out this link',
+												severity: 'important',
+												error_code: null,
+												open: true,
+												close_notification: false
+								};
+				},
+				created: function created() {
+								console.log('Notification component ready to go!');
+				},
 
 
-    methods: {
-        closeThis: function closeThis(notification) {
-            this.open = false;
-            this.close_notifation = true;
-        },
-        openNotification: function openNotification() {
-            this.open = true;
-        }
-    }
+				methods: {
+								closeThis: function closeThis(notification) {
+												this.open = false;
+												this.close_notification = true;
+								},
+								openNotification: function openNotification() {
+												this.open = true;
+								}
+				}
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div>\n\t<h3>Notification Controls</h3>\n\t<section id=\"controls\">\n\t\t\n\t\t<p id=\"model_display\"></p><pre>model: {{$data | json 2}}</pre><p></p>\n\t\t\n\t\t<label>Severity Level</label>\n\t\t\n\t\t<ul id=\"severity\">\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"critical\" value=\"critical\" v-model=\"severity\">\n\t\t\t\t<label for=\"critical\">Critical</label>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"important\" value=\"important\" v-model=\"severity\">\n\t\t\t\t<label for=\"important\">Important</label>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"two\" value=\"minor\" v-model=\"severity\">\n\t\t\t\t<label for=\"two\">Minor</label>\n\t\t\t</li>\n\t\t</ul>\n\t\t\n\t\t<label for=\"message\">Notification Message</label>\n\t\t<input type=\"text\" v-model=\"message\" id=\"message\" placeholder=\"Enter your message...\">\n\t\t\n\t\t<label for=\"error_code\">Error Code</label>\n\t\t<input type=\"text\" v-model=\"error_code\" id=\"error_code\" placeholder=\"Enter an error code...\">\n\t\t\n\t\t<label for=\"href\">Link Destination</label>\n\t\t<input type=\"text\" v-model=\"href\" id=\"href\" placeholder=\"Enter a destination link...\">\n\t\t\n\t\t<label v-show=\"href\" for=\"link_text\">Link Text</label>\n\t\t<input v-show=\"href\" type=\"text\" v-model=\"link_text\" id=\"link_text\" placeholder=\"Enter some text for the link...\">\n\t\t\n\t\t<a class=\"btn btn-primary\" href=\"#\" v-on:click.prevent=\"openNotification()\" v-show=\"!open\" v-model=\"open\">Re-open notification</a>\n\t</section>\n\t\n\t<section v-show=\"open\" class=\"notification\" v-bind:class=\"severity\">\n\t\t<main>\n\t\t\t<h2 v-bind:class=\"severity\">\n\t\t\t\n\t\t\t\t<span v-if=\"severity === 'critical'\">Uh oh!</span>\n\t\t\t\t<span v-if=\"severity === 'important'\">Hold on a sec...</span>\n\t\t\t\t<span v-if=\"severity === 'minor'\">Way to go!</span>\n\t\t\t\n\t\t\t</h2>\n\t\t\t\n\t\t\t<p class=\"message\">{{ message }}</p>\n\t\t\t\n\t\t\t<p v-show=\"error_code\" class=\"error_code\">Error Code: {{ error_code }}</p>\n\t\t\t\n\t\t\t<p v-show=\"href\" class=\"notification_link\">\n\t\t\t\t<a v-bind:href=\"href\" v-bind:title=\"link_text\" target=\"_blank\">\n\t\t\t\t  <span>{{ link_text ?  link_text : 'Fix your problem here'}}</span>\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t\t\n\t\t\t<a class=\"close_notification\" href=\"#\" v-on:click=\"closeThis()\">X</a>\n\t\t</main>\n\t</section>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div>\n\t<h3>Notification Controls</h3>\n\t<section id=\"controls\">\n\t\t\n\t\t<p id=\"model_display\"></p><pre>model: {{$data | json 2}}</pre><p></p>\n\t\t\n\t\t<label>Severity Level</label>\n\t\t\n\t\t<ul id=\"severity\">\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"critical\" value=\"critical\" v-model=\"severity\">\n\t\t\t\t<label for=\"critical\">Critical</label>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"important\" value=\"important\" v-model=\"severity\">\n\t\t\t\t<label for=\"important\">Important</label>\n\t\t\t</li>\n\t\t\t<li>\n\t\t\t\t<input v-on:change=\"openNotification\" type=\"radio\" id=\"two\" value=\"minor\" v-model=\"severity\">\n\t\t\t\t<label for=\"two\">Minor</label>\n\t\t\t</li>\n\t\t</ul>\n\t\t\n\t\t<label for=\"title\">Notification Title</label>\n\t\t<input type=\"text\" v-model=\"title\" id=\"title\" placeholder=\"Enter the title...\">\n\t\t\n\t\t<label for=\"message\">Notification Message</label>\n\t\t<input type=\"text\" v-model=\"message\" id=\"message\" placeholder=\"Enter your message...\">\n\t\t\n\t\t<label for=\"error_code\">Error Code</label>\n\t\t<input type=\"text\" v-model=\"error_code\" id=\"error_code\" placeholder=\"Enter an error code...\">\n\t\t\n\t\t<label for=\"href\">Link Destination</label>\n\t\t<input type=\"text\" v-model=\"href\" id=\"href\" placeholder=\"Enter a destination link...\">\n\t\t\n\t\t<label v-show=\"href\" for=\"link_text\">Link Text</label>\n\t\t<input v-show=\"href\" type=\"text\" v-model=\"link_text\" id=\"link_text\" placeholder=\"Enter some text for the link...\">\n\t\t\n\t\t<a class=\"btn btn-primary\" href=\"#\" v-on:click.prevent=\"openNotification()\" v-show=\"!open\" v-model=\"open\">Re-open notification</a>\n\t</section>\n\t\n\t<section v-show=\"open\" class=\"notification\" v-bind:class=\"severity\">\n\t\t<main>\n\t\t\t<h2 v-bind:class=\"severity\">\n\t\t\t\t{{ title }}\n\t\t\t</h2>\n\t\t\t\n\t\t\t<p class=\"message\">{{ message }}</p>\n\t\t\t\n\t\t\t<p v-show=\"error_code\" class=\"error_code\">Error Code: {{ error_code }}</p>\n\t\t\t\n\t\t\t<p v-show=\"href\" class=\"notification_link\">\n\t\t\t\t<a v-bind:href=\"href\" v-bind:title=\"link_text\" target=\"_blank\">\n\t\t\t\t  <span>{{ link_text ?  link_text : 'Fix your problem here'}}</span>\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t\t\n\t\t\t<a class=\"close_notification\" href=\"#\" v-on:click=\"closeThis()\">X</a>\n\t\t</main>\n\t</section>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
