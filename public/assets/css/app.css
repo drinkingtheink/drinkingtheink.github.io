@@ -12054,6 +12054,8 @@ body {
           color: #FFC341; }
         body .notification main h2.minor {
           color: #73AF55; }
+        body .notification main h2.system {
+          color: #00D2C7; }
       body .notification main p {
         color: #D5DEE3; }
         body .notification main p.message {
@@ -12101,6 +12103,12 @@ body {
       right: 1rem;
       width: 200px;
       border-top: 3px solid #73AF55; }
+    body .notification.system main {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 200px;
+      border-top: 3px solid #00D2C7; }
   body .note-appear-enter-active {
     transition: all .3s ease; }
   body .note-appear-leave-active {
