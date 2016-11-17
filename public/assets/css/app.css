@@ -12029,6 +12029,8 @@ body {
   body .notification {
     /** own the screen! **/
     z-index: 100000000000000; }
+    body .notification h3 {
+      padding-left: 1rem; }
     body .notification main {
       border-radius: 2px;
       animation-name: slideInUp;
@@ -12055,20 +12057,22 @@ body {
       body .notification main p {
         color: #D5DEE3; }
         body .notification main p.message {
-          padding-bottom: 1rem; }
+          padding-bottom: .5rem; }
         body .notification main p.error_code {
-          padding: .5rem 0;
-          border-top: 1px solid #444;
-          border-bottom: 1px solid #444; }
+          padding: .5rem 0 0 0;
+          border-top: 1px solid #444; }
+        body .notification main p.notification_link {
+          padding: .5rem 0 0 0;
+          border-top: 1px solid #444; }
       body .notification main a.close_notification {
         position: absolute;
-        top: 2%;
-        right: 5%; }
+        top: .5rem;
+        right: 1rem; }
     body .notification.critical {
       text-align: center; }
       body .notification.critical main {
         position: relative;
-        min-width: 500px;
+        width: 400px;
         top: 20%;
         margin: 0 auto;
         text-align: left;
@@ -12089,24 +12093,14 @@ body {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
-      min-width: 200px;
+      width: 200px;
       border-top: 3px solid #FFC341; }
     body .notification.minor main {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
-      min-width: 200px;
+      width: 200px;
       border-top: 3px solid #73AF55; }
-    body .notification.close_notification {
-      animation-name: fadeOut;
-      animation-iteration-count: 1;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-timing-function: ease;
-      animation-fill-mode: both;
-      -ms-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
-      backface-visibility: hidden; }
   body .note-appear-enter-active {
     transition: all .3s ease; }
   body .note-appear-leave-active {
@@ -12133,19 +12127,25 @@ body {
         margin-bottom: 1rem; }
     body #controls #model_display {
       float: left;
-      width: 50%;
-      display: inline-block; }
+      width: 50%; }
+      body #controls #model_display pre {
+        width: 80%; }
     body #controls form {
       float: left;
       width: 50%;
       padding-left: 2%; }
+      body #controls form label {
+        display: block; }
       body #controls form ul#severity {
         list-style: none;
-        padding: 0; }
+        padding: 0;
+        display: block;
+        clear: both;
+        height: 3rem; }
         body #controls form ul#severity li {
-          padding: .25rem;
-          border: 1px solid #f7f7f7;
+          padding: .25rem 1rem;
           margin-bottom: .25rem;
-          max-width: 20vw; }
+          max-width: 30%;
+          float: left; }
 
 /*# sourceMappingURL=app.css.map */
