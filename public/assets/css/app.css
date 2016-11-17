@@ -12025,7 +12025,6 @@ body {
     background-color: #00d2c7; }
 
 body {
-  overflow: hidden;
   position: relative; }
   body .notification {
     /** own the screen! **/
