@@ -12064,30 +12064,11 @@ body {
         position: absolute;
         top: 2%;
         right: 5%; }
-    body .notification.close {
-      animation-name: slideOutRight;
-      animation-iteration-count: 1;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-timing-function: ease;
-      animation-fill-mode: both;
-      -ms-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
-      backface-visibility: hidden; }
     body .notification.critical {
-      animation-name: fadeIn;
-      animation-iteration-count: 1;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-timing-function: ease;
-      animation-fill-mode: both;
-      -ms-backface-visibility: hidden;
-      -o-backface-visibility: hidden;
-      backface-visibility: hidden;
       text-align: center; }
       body .notification.critical main {
         position: relative;
-        min-width: 30vw;
+        min-width: 500px;
         top: 20%;
         margin: 0 auto;
         text-align: left;
@@ -12108,13 +12089,13 @@ body {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
-      width: 12vw;
+      min-width: 200px;
       border-top: 3px solid #FFC341; }
     body .notification.minor main {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
-      width: 12vw;
+      min-width: 200px;
       border-top: 3px solid #73AF55; }
     body .notification.close_notification {
       animation-name: fadeOut;
@@ -12126,25 +12107,45 @@ body {
       -ms-backface-visibility: hidden;
       -o-backface-visibility: hidden;
       backface-visibility: hidden; }
+  body .note-appear-enter-active {
+    transition: all .3s ease; }
+  body .note-appear-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); }
+  body .note-appear-enter, body .note-appear-leave-active {
+    padding-left: 10px;
+    opacity: 0; }
   body #controls {
+    margin-left: -15px;
+    margin-right: -15px;
     padding: 1rem;
     background: white;
     border-bottom: 1px solid #D7E0E4; }
+    body #controls:before, body #controls:after {
+      content: " ";
+      display: table; }
+    body #controls:after {
+      clear: both; }
     body #controls input {
       display: block; }
       body #controls input[type="text"] {
         padding: .5rem 1rem;
-        width: 20vw; }
-    body #controls #model_display pre {
-      display: inline-block;
-      max-width: 20vw; }
-    body #controls ul#severity {
-      list-style: none;
-      padding: 0; }
-      body #controls ul#severity li {
-        padding: .25rem;
-        border: 1px solid #f7f7f7;
-        margin-bottom: .25rem;
-        max-width: 20vw; }
+        width: 80%;
+        margin-bottom: 1rem; }
+    body #controls #model_display {
+      float: left;
+      width: 50%;
+      display: inline-block; }
+    body #controls form {
+      float: left;
+      width: 50%;
+      padding-left: 2%; }
+      body #controls form ul#severity {
+        list-style: none;
+        padding: 0; }
+        body #controls form ul#severity li {
+          padding: .25rem;
+          border: 1px solid #f7f7f7;
+          margin-bottom: .25rem;
+          max-width: 20vw; }
 
 /*# sourceMappingURL=app.css.map */
