@@ -10779,7 +10779,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 var _ = __webpack_require__(7);
 
@@ -10815,7 +10814,7 @@ exports.default = {
         get_names: function get_names() {
             var vm = this;
             $.ajax({
-                url: 'http://uinames.com/api/?amount=10',
+                url: 'https://uinames.com/api/?amount=10',
                 dataType: 'json',
                 type: 'GET'
             }).done(function (response) {
@@ -28595,27 +28594,25 @@ var render = function() {
             "section",
             { staticClass: "name_list" },
             _vm._l(_vm.names, function(name, index) {
-              return _vm.names_exist
-                ? _c(
-                    "span",
-                    {
-                      key: index,
-                      staticClass: "name",
-                      on: {
-                        click: function($event) {
-                          _vm.select_name(name.name)
-                        }
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(name.name) +
-                          "\n                "
-                      )
-                    ]
+              return _c(
+                "span",
+                {
+                  key: index,
+                  staticClass: "name",
+                  on: {
+                    click: function($event) {
+                      _vm.select_name(name.name)
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(name.name) +
+                      "\n                "
                   )
-                : _vm._e()
+                ]
+              )
             })
           ),
           _vm._v(" "),
