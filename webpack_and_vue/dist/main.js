@@ -10780,7 +10780,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 var _ = __webpack_require__(7);
 
@@ -28570,7 +28569,7 @@ var render = function() {
             ],
             on: { click: _vm.get_dog }
           },
-          [_vm._v("Refresh Dog")]
+          [_vm._v("Different Dog, Please")]
         )
       ]),
       _vm._v(" "),
@@ -28588,35 +28587,9 @@ var render = function() {
           staticClass: "names"
         },
         [
-          _c(
-            "h2",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: _vm.names_exist,
-                  expression: "names_exist"
-                }
-              ]
-            },
-            [_vm._v("What name is worthy of this magnificent creature?")]
-          ),
-          _vm._v(" "),
-          _c(
-            "h2",
-            {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: !_vm.names_exist,
-                  expression: "!names_exist"
-                }
-              ]
-            },
-            [_vm._v("Whoops, you've used up all the names!")]
-          ),
+          _c("h2", [
+            _vm._v("What name is worthy of this magnificent creature?")
+          ]),
           _vm._v(" "),
           _c(
             "section",
