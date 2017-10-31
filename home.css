@@ -1,0 +1,101 @@
+body {
+	font-family: 'Cantarell', sans-serif;
+	color: #333;
+	background-color: #FFFFFF;
+	background-image:url(data:image/svg+xml;base64,CiAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzYyJz4KICAgIDxkZWZzPgogICAgCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdjJyB3aWR0aD0nMzEnIGhlaWdodD0nNjInIHg9JzAnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KICAgIAkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNjNGVhZTgnIHN0cm9rZS13aWR0aD0nMC4xMicgZD0nTS0yLDFMNywxME0tMiw2TDcsMTVNLTIsLTRMNyw1Jy8+CiAgICAJPC9wYXR0ZXJuPgogICAgCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdjMicgd2lkdGg9JzMxJyBoZWlnaHQ9JzYyJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CiAgICAJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjYzRlYWU4JyBzdHJva2Utd2lkdGg9JzAuMTInIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgogICAgCTwvcGF0dGVybj4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgogICAgPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+CiAgPC9zdmc+CiAg);
+}
+
+html {
+	font-size: 16px;
+}
+	
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+	color: #1A535C;
+}
+
+h2,
+h3 {
+	color: #4ECDC4;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+li {
+	padding: .5rem 0;
+	border-bottom: 1px solid #f1f6f8;
+}
+
+li:last-child {
+	border-bottom: none;
+}
+
+main.home {
+	border-top: 3px solid #1A535C;
+	width: 50vw;
+	margin: 0 auto;
+	padding: 1rem;
+	background-color: white;
+}
+
+h1.headline {
+	text-align: center;
+	max-width: 45vw;
+	margin: 0 auto;
+	padding: 2rem 0;
+}
+
+a {
+	color: #FF6B6B;
+	transition: all .2s;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+a:hover {
+	color: #A34545;
+}
+
+.other_resources {
+	display: flex;
+	align-content: space-between;
+}
+
+.other_resources a {
+	width: 24.5%;
+	display: inline-block;
+	padding: .5rem;
+}
+.other_resources a i {
+	opacity: .5;
+	transition: all .3s;
+}
+
+.other_resources a:hover i {
+	opacity: 1;
+}
+
+
+.highlight {
+	color: #4ECDC4;
+}
+
+.portrait {
+	margin: 2rem auto 0 auto;
+	height: 10rem;
+	width: 10rem;
+	background: url('./img/jmh_WEB.jpg') no-repeat center;
+	background-size: contain;
+	border-radius: 50%;
+	border: 3px solid #1A535C;
+}
