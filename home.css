@@ -16,7 +16,8 @@ h4 {
 	font-family: 'Fjalla One', sans-serif;
 }
 
-h1 {
+h1,
+p {
 	color: #1A535C;
 }
 
@@ -85,6 +86,9 @@ a:hover {
 	opacity: 1;
 }
 
+.intro {
+	font-weight: 600;
+}
 
 .highlight {
 	color: #4ECDC4;
