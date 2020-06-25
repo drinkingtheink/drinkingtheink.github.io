@@ -100,7 +100,7 @@ a:hover {
 	align-content: space-between;
 }
 
-@media screen and (max-width: 450px) { 
+@media screen and (max-width: 500px) { 
   .other_resources {
 		display: block;
 	}
