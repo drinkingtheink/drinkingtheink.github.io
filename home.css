@@ -144,20 +144,20 @@ a:hover {
 
 .portrait {
 	margin: 2rem auto 0 auto;
-	height: 20rem;
-	width: 20rem;
+	height: 15rem;
+	width: 15rem;
 	background: url('./img/jmh_WEB.jpg') no-repeat center;
 	background-size: contain;
 	border-radius: 50%;
 	border: 3px solid #1A535C;
 }
 
-/*@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) { 
 	.portrait {
 	  height: 20rem;
 		width: 20rem;
 	}
-}*/
+}
 
 
 
