@@ -70,6 +70,12 @@ h1.headline {
 	padding: 1rem 0;
 }
 
+@media screen and (max-width: 800px) { 
+  h1.headline {
+	  max-width: 85vw;
+	}
+}
+
 h2.subheadline {
   text-align: center;
   margin: 0;
@@ -92,6 +98,12 @@ a:hover {
 .other_resources {
 	display: flex;
 	align-content: space-between;
+}
+
+@media screen and (max-width: 450px) { 
+  .other_resources {
+		display: block;
+	}
 }
 
 .other_resources a {
@@ -140,12 +152,12 @@ a:hover {
 	border: 3px solid #1A535C;
 }
 
-@media screen and (max-width: 800px) { 
+/*@media screen and (max-width: 800px) { 
 	.portrait {
 	  height: 20rem;
 		width: 20rem;
 	}
-}
+}*/
 
 
 
