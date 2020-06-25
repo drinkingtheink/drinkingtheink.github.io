@@ -102,7 +102,7 @@ a:hover {
 
 @media screen and (max-width: 500px) { 
   .other_resources {
-		display: block;
+		flex-wrap: wrap;
 	}
 }
 
@@ -114,8 +114,7 @@ a:hover {
 
 @media screen and (max-width: 500px) { 
   .other_resources a {
-		display: block;
-		width: 100%;
+		width: 49%;
 	}
 }
 
