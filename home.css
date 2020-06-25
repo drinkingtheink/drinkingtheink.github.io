@@ -154,8 +154,8 @@ a:hover {
 
 @media screen and (max-width: 800px) { 
 	.portrait {
-	  height: 20rem;
-		width: 20rem;
+	  height: 10rem;
+		width: 10rem;
 	}
 }
 
